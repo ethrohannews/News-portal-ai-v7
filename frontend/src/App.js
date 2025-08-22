@@ -1002,12 +1002,20 @@ function NewsPortalContent() {
             {/* Mobile: Horizontal scroll tabs */}
             <div className="md:hidden w-full overflow-x-auto">
               <div className="min-w-max">
-                <TabsList className="bg-white/70 backdrop-blur-sm p-1 shadow-lg border border-orange-100 flex w-max">
+                <TabsList className={`backdrop-blur-sm p-1 shadow-lg transition-all duration-300 flex w-max ${
+                  isDarkMode 
+                    ? 'bg-slate-800/70 border border-slate-700' 
+                    : 'bg-white/70 border border-orange-100'
+                }`}>
                   {categories.map((category) => (
                     <TabsTrigger
                       key={category}
                       value={category}
-                      className="px-3 py-2 text-slate-700 font-medium rounded-lg transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white text-sm whitespace-nowrap flex-shrink-0"
+                      className={`px-3 py-2 font-medium rounded-lg transition-all duration-300 text-sm whitespace-nowrap flex-shrink-0 ${
+                        isDarkMode 
+                          ? 'text-slate-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white' 
+                          : 'text-slate-700 data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white'
+                      }`}
                     >
                       {category}
                     </TabsTrigger>
