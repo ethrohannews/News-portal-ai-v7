@@ -1018,12 +1018,20 @@ function NewsPortalContent() {
             
             {/* Desktop: Regular tabs */}
             <div className="hidden md:block">
-              <TabsList className="bg-white/70 backdrop-blur-sm p-1 shadow-lg border border-orange-100">
+              <TabsList className={`backdrop-blur-sm p-1 shadow-lg transition-all duration-300 ${
+                isDarkMode 
+                  ? 'bg-slate-800/70 border border-slate-700' 
+                  : 'bg-white/70 border border-orange-100'
+              }`}>
                 {categories.map((category) => (
                   <TabsTrigger
                     key={category}
                     value={category}
-                    className="px-6 py-3 text-slate-700 font-medium rounded-lg transition-all duration-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white"
+                    className={`px-6 py-3 font-medium rounded-lg transition-all duration-300 ${
+                      isDarkMode 
+                        ? 'text-slate-300 data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white' 
+                        : 'text-slate-700 data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-500 data-[state=active]:text-white'
+                    }`}
                   >
                     {category}
                   </TabsTrigger>
