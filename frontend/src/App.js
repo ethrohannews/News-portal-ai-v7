@@ -68,9 +68,9 @@ const NEWS_CATEGORIES = [
 
 function App() {
   return (
-    <ThemeProvider>
+    // <ThemeProvider>
       <NewsPortalContent />
-    </ThemeProvider>
+    // </ThemeProvider>
   );
 }
 
