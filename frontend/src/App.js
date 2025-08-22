@@ -943,7 +943,11 @@ function NewsPortalContent() {
       )}
 
       {/* Header - Mobile Responsive */}
-      <header className="bg-white/90 backdrop-blur-sm shadow-lg border-b border-orange-100">
+      <header className={`backdrop-blur-sm shadow-lg border-b transition-all duration-300 ${
+        isDarkMode 
+          ? 'bg-slate-800/90 border-slate-700/50' 
+          : 'bg-white/90 border-orange-100'
+      }`}>
         <div className="container mx-auto px-3 md:px-4 py-3 md:py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2 md:space-x-4">
