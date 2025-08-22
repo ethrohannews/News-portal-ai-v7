@@ -1132,7 +1132,11 @@ function NewsPortalContent() {
                 {news.map((article) => (
                   <Card 
                     key={article.id} 
-                    className="group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer bg-white/90 backdrop-blur-sm border-slate-200/60 shadow-lg"
+                    className={`group hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer backdrop-blur-sm shadow-lg ${
+                      isDarkMode 
+                        ? 'bg-slate-800/90 border-slate-700/60' 
+                        : 'bg-white/90 border-slate-200/60'
+                    }`}
                     onClick={() => openArticle(article)}
                   >
                     <div className="p-4 md:p-6">
