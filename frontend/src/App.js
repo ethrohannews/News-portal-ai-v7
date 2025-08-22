@@ -1062,7 +1062,11 @@ function NewsPortalContent() {
                   {featuredNews.map((article) => (
                     <Card 
                       key={article.id} 
-                      className="group hover:shadow-xl transition-all duration-300 cursor-pointer bg-gradient-to-br from-white to-yellow-50 border-yellow-200 shadow-lg"
+                      className={`group hover:shadow-xl transition-all duration-300 cursor-pointer shadow-lg ${
+                        isDarkMode 
+                          ? 'bg-gradient-to-br from-slate-800 to-slate-700 border-yellow-500/30' 
+                          : 'bg-gradient-to-br from-white to-yellow-50 border-yellow-200'
+                      }`}
                       onClick={() => openArticle(article)}
                     >
                       <div className="p-4 md:p-6">
