@@ -75,6 +75,9 @@ function App() {
 }
 
 function NewsPortalContent() {
+  // Theme Hook
+  const { isDarkMode, actualTheme } = useTheme();
+  
   // State Management
   const [currentPage, setCurrentPage] = useState('home'); // 'home' or 'admin'
   const [news, setNews] = useState([]);
