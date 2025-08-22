@@ -421,6 +421,10 @@ function NewsPortalContent() {
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <span className="text-green-300 text-sm">সিস্টেম সক্রিয়</span>
                   </div>
+                  
+                  {/* Theme Toggle in Admin */}
+                  <ThemeToggle />
+                  
                   <Button
                     variant="outline"
                     onClick={() => {
