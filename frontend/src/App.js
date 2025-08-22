@@ -75,8 +75,9 @@ function App() {
 }
 
 function NewsPortalContent() {
-  // Theme Hook
-  const { isDarkMode, actualTheme } = useTheme();
+  // Theme Hook - temporarily disabled
+  // const { isDarkMode, actualTheme } = useTheme();
+  const isDarkMode = false; // Temporary for testing
   
   // State Management
   const [currentPage, setCurrentPage] = useState('home'); // 'home' or 'admin'
