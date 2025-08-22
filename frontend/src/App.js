@@ -1124,8 +1124,14 @@ function NewsPortalContent() {
             {/* News Grid - Mobile Responsive */}
             {loading ? (
               <div className="flex items-center justify-center py-8 md:py-12">
-                <Loader2 className="w-6 h-6 md:w-8 md:h-8 animate-spin text-orange-500" />
-                <span className="ml-2 text-base md:text-lg text-slate-600">সংবাদ লোড হচ্ছে...</span>
+                <Loader2 className={`w-6 h-6 md:w-8 md:h-8 animate-spin ${
+                  isDarkMode ? 'text-orange-400' : 'text-orange-500'
+                }`} />
+                <span className={`ml-2 text-base md:text-lg ${
+                  isDarkMode ? 'text-slate-300' : 'text-slate-600'
+                }`}>
+                  সংবাদ লোড হচ্ছে...
+                </span>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
