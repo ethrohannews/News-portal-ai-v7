@@ -952,6 +952,9 @@ function NewsPortalContent() {
                 </div>
               )}
               
+              {/* Theme Toggle */}
+              <ThemeToggle />
+              
               <Button
                 onClick={() => setCurrentPage('admin')}
                 variant="outline"
