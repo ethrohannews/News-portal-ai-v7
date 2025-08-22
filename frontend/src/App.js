@@ -1227,7 +1227,11 @@ function NewsPortalContent() {
 
       {/* Article Modal - Mobile Responsive */}
       <Dialog open={!!selectedArticle} onOpenChange={() => setSelectedArticle(null)}>
-        <DialogContent className="max-w-4xl max-h-[90vh] md:max-h-[80vh] overflow-hidden mx-2 md:mx-auto">
+        <DialogContent className={`max-w-4xl max-h-[90vh] md:max-h-[80vh] overflow-hidden mx-2 md:mx-auto transition-all duration-300 ${
+          isDarkMode 
+            ? 'bg-slate-800 border-slate-700 text-slate-200' 
+            : 'bg-white border-slate-200'
+        }`}>
           {selectedArticle && (
             <>
               <DialogHeader>
