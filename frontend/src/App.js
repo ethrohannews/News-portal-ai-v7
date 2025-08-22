@@ -1200,9 +1200,19 @@ function NewsPortalContent() {
 
             {news.length === 0 && !loading && (
               <div className="text-center py-8 md:py-12">
-                <Newspaper className="w-12 h-12 md:w-16 md:h-16 text-slate-400 mx-auto mb-4" />
-                <h3 className="text-lg md:text-xl font-semibold text-slate-600 mb-2">কোন সংবাদ পাওয়া যায়নি</h3>
-                <p className="text-slate-500 mb-6 text-sm md:text-base">এই ক্যাটাগরিতে এখনো কোন সংবাদ নেই।</p>
+                <Newspaper className={`w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 ${
+                  isDarkMode ? 'text-slate-500' : 'text-slate-400'
+                }`} />
+                <h3 className={`text-lg md:text-xl font-semibold mb-2 ${
+                  isDarkMode ? 'text-slate-300' : 'text-slate-600'
+                }`}>
+                  কোন সংবাদ পাওয়া যায়নি
+                </h3>
+                <p className={`text-sm md:text-base mb-6 ${
+                  isDarkMode ? 'text-slate-400' : 'text-slate-500'
+                }`}>
+                  এই ক্যাটাগরিতে এখনো কোন সংবাদ নেই।
+                </p>
               </div>
             )}
           </TabsContent>
