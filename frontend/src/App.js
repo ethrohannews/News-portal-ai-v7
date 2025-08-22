@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
 import axios from 'axios';
 import './App.css';
 
