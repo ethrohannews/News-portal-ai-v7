@@ -955,10 +955,18 @@ function NewsPortalContent() {
                 <Newspaper className="w-5 h-5 md:w-8 md:h-8 text-white" />
               </div>
               <div>
-                <h1 className="text-xl md:text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+                <h1 className={`text-xl md:text-3xl font-bold transition-all duration-300 ${
+                  isDarkMode 
+                    ? 'bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent' 
+                    : 'bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent'
+                }`}>
                   বাংলা নিউজ পোর্টাল
                 </h1>
-                <p className="text-slate-600 text-xs md:text-base hidden md:block">আধুনিক বাংলা সংবাদ প্ল্যাটফর্ম</p>
+                <p className={`text-xs md:text-base hidden md:block transition-all duration-300 ${
+                  isDarkMode ? 'text-slate-300' : 'text-slate-600'
+                }`}>
+                  আধুনিক বাংলা সংবাদ প্ল্যাটফর্ম
+                </p>
               </div>
             </div>
             
