@@ -1305,7 +1305,11 @@ function NewsPortalContent() {
       </Dialog>
 
       {/* Footer - Mobile Responsive */}
-      <footer className="bg-gradient-to-r from-slate-800 to-slate-900 text-white py-6 md:py-8 mt-8 md:mt-16">
+      <footer className={`text-white py-6 md:py-8 mt-8 md:mt-16 transition-all duration-300 ${
+        isDarkMode 
+          ? 'bg-gradient-to-r from-slate-900 to-slate-800' 
+          : 'bg-gradient-to-r from-slate-800 to-slate-900'
+      }`}>
         <div className="container mx-auto px-3 md:px-4">
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-4">
