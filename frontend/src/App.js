@@ -399,7 +399,11 @@ function NewsPortalContent() {
           : 'bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900'
       }`}>
         {/* Admin Header */}
-        <header className="bg-black/20 backdrop-blur-md border-b border-white/10">
+        <header className={`backdrop-blur-md border-b transition-all duration-300 ${
+          isDarkMode 
+            ? 'bg-black/30 border-white/10' 
+            : 'bg-black/20 border-white/10'
+        }`}>
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2 md:space-x-4">
