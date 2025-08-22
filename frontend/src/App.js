@@ -393,7 +393,11 @@ function NewsPortalContent() {
   // Render Admin Page
   if (currentPage === 'admin') {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900">
+      <div className={`min-h-screen transition-all duration-300 ${
+        isDarkMode 
+          ? 'bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900' 
+          : 'bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900'
+      }`}>
         {/* Admin Header */}
         <header className="bg-black/20 backdrop-blur-md border-b border-white/10">
           <div className="container mx-auto px-4 py-4">
