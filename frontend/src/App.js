@@ -67,6 +67,14 @@ const NEWS_CATEGORIES = [
 ];
 
 function App() {
+  return (
+    <ThemeProvider>
+      <NewsPortalContent />
+    </ThemeProvider>
+  );
+}
+
+function NewsPortalContent() {
   // State Management
   const [currentPage, setCurrentPage] = useState('home'); // 'home' or 'admin'
   const [news, setNews] = useState([]);
