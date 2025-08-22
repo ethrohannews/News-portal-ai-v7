@@ -1163,11 +1163,19 @@ function NewsPortalContent() {
                           </Badge>
                         )}
                       </div>
-                      <h3 className="text-base md:text-lg font-bold text-slate-800 mb-3 group-hover:text-orange-600 transition-colors line-clamp-2">
+                      <h3 className={`text-base md:text-lg font-bold mb-3 group-hover:text-orange-600 transition-colors line-clamp-2 ${
+                        isDarkMode ? 'text-slate-200' : 'text-slate-800'
+                      }`}>
                         {article.title}
                       </h3>
-                      <p className="text-slate-600 mb-4 line-clamp-3 text-sm md:text-base">{article.summary}</p>
-                      <div className="flex items-center justify-between text-xs md:text-sm text-slate-500">
+                      <p className={`mb-4 line-clamp-3 text-sm md:text-base ${
+                        isDarkMode ? 'text-slate-300' : 'text-slate-600'
+                      }`}>
+                        {article.summary}
+                      </p>
+                      <div className={`flex items-center justify-between text-xs md:text-sm ${
+                        isDarkMode ? 'text-slate-400' : 'text-slate-500'
+                      }`}>
                         <div className="flex items-center space-x-2 md:space-x-3">
                           <span className="flex items-center">
                             <Clock className="w-3 h-3 mr-1" />
