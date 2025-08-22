@@ -907,7 +907,11 @@ function NewsPortalContent() {
 
   // Render Home Page - Mobile Responsive
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 via-red-50 to-pink-50">
+    <div className={`min-h-screen transition-all duration-300 ${
+      isDarkMode 
+        ? 'bg-gradient-to-br from-slate-900 via-gray-900 to-black' 
+        : 'bg-gradient-to-br from-orange-50 via-red-50 to-pink-50'
+    }`}>
       {/* Enhanced Breaking News Ticker - More Animated and Colorful */}
       {breakingNewsTicker.length > 0 && isBreakingNewsVisible && (
         <div className="breaking-news-ticker py-3 px-2 md:px-4 overflow-hidden sticky top-0 z-50">
